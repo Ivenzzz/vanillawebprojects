@@ -1,0 +1,175 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.todo-app {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.todo-app h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#taskInput:focus {
+    outline: none;
+    border-color: #5c9ded;
+}
+
+#addTaskBtn {
+    padding: 10px 15px;
+    background-color: #5c9ded;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#addTaskBtn:hover {
+    background-color: #4686d3;
+}
+
+#taskList {
+    list-style: none;
+}
+
+#taskList li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #eef3f8;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+#taskList li.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+#deleteSelectedBtn {
+    padding: 10px 15px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.actions-section {
+    display: flex;
+    justify-content: end;
+}
+
+#deleteSelectedBtn:hover {
+    background-color: #c0392b;
+}
+
+.task-text.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.edit-btn {
+    margin-left: 10px;
+    padding: 4px 8px;
+    background-color: #d8ee5b;
+    color: rgb(51, 51, 51);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.2s;
+}
+
+.edit-btn:hover {
+    background-color: #d8ee5b94;
+}
+
+/* CSS transitions for adding and editing tasks */
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+li.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+li.editing {
+    background-color: #f0f8ff; /* Light blue background during editing */
+    transition: background-color 0.3s ease; /* Smooth transition for the background */
+}
+
+.edit-btn {
+    margin-left: 10px;
+    padding: 4px 8px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.2s;
+}
+
+.edit-btn:hover {
+    background-color: #2980b9;
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateX(-20px);
+    pointer-events: none; /* Prevent interaction during transition */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
