@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F1EFEC;
+    padding: 2rem;
+    font-family: 'Cal Sans', sans-serif;
+}
+
+.card {
+    background-color: #123458;
+    padding: 1.6rem;
+    text-align: center;
+    color: #D4C9BE;
+    border-radius: 0.2rem;
+    box-shadow: 0 0 0.5rem #3E3F5B;
+}
+
+.card img {
+    width: 16rem;
+    height: auto;
+}
+
+.card h1 {
+    letter-spacing: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.card h2 {
+    font-weight: 50;
+    margin-bottom: 0.4rem;
+}
+
+.card p {
+    color: #F1EFEC;
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+.card:hover {
+    transform: scale(1.01);
+    transition: transform 0.3s ease-in-out;
+}
